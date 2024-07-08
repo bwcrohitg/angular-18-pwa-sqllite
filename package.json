@@ -10,8 +10,8 @@
     "serve:ssr:angular18": "node dist/angular18/server/server.mjs",
     "prepare": "husky",
     "precommit": "lint-staged",
-    "lint-fix": "prettier . --write",
-    "lint-check": "prettier . --check"
+    "lint-fix": "npx prettier --write .",
+    "lint-check": "npx prettier --check ."
   },
   "private": true,
   "dependencies": {
@@ -51,7 +51,7 @@
   },
   "lint-staged": {
     "**/*": [
-      "prettier --check"
+      "prettier ./ --check"
     ]
   },
   "husky": {
