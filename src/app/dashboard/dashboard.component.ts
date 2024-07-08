@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormComponent } from '../form/form.component';
 
 @Component({
@@ -12,8 +12,8 @@ export class DashboardComponent implements OnInit {
   formDataModel = '1';
   constructor() {}
   ngOnInit() {
-    setInterval(() => {
-      console.log('DashboardComponent', this.formDataModel);
-    }, 30000);
+    // setInterval(() => {
+    //   console.log('DashboardComponent', this.formDataModel);
+    // }, 30000);
   }
 }

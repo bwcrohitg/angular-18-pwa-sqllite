@@ -6,21 +6,18 @@ import { FormsModule, NgModel } from '@angular/forms';
   standalone: true,
   imports: [FormsModule],
   templateUrl: './form.component.html',
-  styleUrl: './form.component.scss'
+  styleUrl: './form.component.scss',
 })
 export class FormComponent {
-
   public formDataInput = input.required<string>();
   public formDataModel = model.required<string>();
   onInputChange($evt: any) {
-    this.formDataInput
-    console.log('formDataInput',$evt,this.formDataInput());
-    
-   }
-   onModelChange($evt: any) {
-    this.formDataModel
-    this.formDataModel.set($evt)
-    console.log('onModelChange',$evt,this.formDataModel());
-    
-   }
+    this.formDataInput;
+    console.log('formDataInput', $evt, this.formDataInput());
+  }
+  onModelChange($evt: any) {
+    this.formDataModel;
+    this.formDataModel.set($evt);
+    console.log('onModelChange', $evt, this.formDataModel());
+  }
 }

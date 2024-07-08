@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:angular18": "node dist/angular18/server/server.mjs",
-    "prepare": "husky"
+    "prepare": "husky",
+    "precommit": "lint-staged",
+    "lint-fix": "prettier . --write"
   },
   "private": true,
   "dependencies": {
@@ -46,6 +48,13 @@
     "typescript": "~5.4.2"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": [
+      "prettier --check"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
   }
 }
