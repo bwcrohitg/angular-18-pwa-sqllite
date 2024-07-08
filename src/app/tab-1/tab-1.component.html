@@ -1,1 +1,9 @@
-<p>tab-1 works!</p>
+<p>On Tab tab-1</p>
+<ol>
+  @for (item of data; track item.name) {
+    <li>
+      <b>from</b>: {{ item.from }}, <b>Name</b>: {{ item.name }},
+      <b>createdOn</b>: {{ item.createdOn }}
+    </li>
+  }
+</ol>
