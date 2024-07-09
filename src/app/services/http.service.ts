@@ -9,7 +9,7 @@ export class HttpService {
   // private http = inject(HttpClient);
   constructor(public http: HttpClient) {}
   getData(tab: string): Promise<any> {
-    const res = this.http.get(environment + tab);
+    const res = this.http.get(environment.url + tab);
     return new Promise((reserved, reject) => {
       res.subscribe({
         error(err) {
